@@ -1,0 +1,135 @@
+digraph "GCP ML Platform - Complete Infra" {
+	graph [bgcolor=white compound=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="GCP ML Platform - Complete Infra" nodesep=0.8 pad=0.75 rankdir=LR ranksep=1.0 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	b18ccbe6ce6440fdabfa7b7d791af532 -> "5f07ddebf10a4239bc5f0cb566c50045" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"5f07ddebf10a4239bc5f0cb566c50045" -> "10fbaf77b40b47d08bd7835320196411" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	subgraph "cluster_Local Environment" {
+		graph [bgcolor="#FFF8E1" fontname="Sans-Serif" fontsize=12 label="Local Environment" labeljust=l margin=25 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		subgraph "cluster_Docker Container" {
+			graph [bgcolor="#E0F7FA" fontname="Sans-Serif" fontsize=12 label="Docker Container" labeljust=l margin=20 pencolor="#AEB6BE" rankdir=LR shape=box style=dashed]
+			subgraph "cluster_ML Pipeline" {
+				graph [bgcolor="#F1F8E9" fontname="Sans-Serif" fontsize=12 label="ML Pipeline" labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+				b18ccbe6ce6440fdabfa7b7d791af532 [label="Model
+Training" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+				"5f07ddebf10a4239bc5f0cb566c50045" [label="Model
+Prediction" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+				"10fbaf77b40b47d08bd7835320196411" [label="Model
+Evaluation" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+			}
+		}
+	}
+	f18f530633464888aeaa424cabb253a6 -> "069debcd6a8d4ee2a332c9442dbc81b9" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"069debcd6a8d4ee2a332c9442dbc81b9" -> "244f4e34d4ec470084459125f3509860" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f18f530633464888aeaa424cabb253a6 -> "33370774eea84bd6b76c38aaca3b4500" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"6362d5c1d2814df9b6a86683713e30f2" -> "5a69f16dd7524fc19968d1f2b1bbf287" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"5a69f16dd7524fc19968d1f2b1bbf287" -> "1833a0cc8b3245bda036081039ee6a95" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"57bc20d9c0e747edb803a13e8f423aca" -> "0124b8c8ae0741dab08aeadf15488690" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"0124b8c8ae0741dab08aeadf15488690" -> e68cf70b2c1b407ba51c1d19621ff95e [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	e68cf70b2c1b407ba51c1d19621ff95e -> "130a9003bb614e1db770cb1b25ee17fc" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"130a9003bb614e1db770cb1b25ee17fc" -> "09d7b4559be74d27b331ac086e9cd64c" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"130a9003bb614e1db770cb1b25ee17fc" -> "33388acecc2145f8b57bfaeec228d8b6" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"09d7b4559be74d27b331ac086e9cd64c" -> "33388acecc2145f8b57bfaeec228d8b6" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"09d7b4559be74d27b331ac086e9cd64c" -> "8ed69d3f155a4a39a834bcd151fb504b" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"1833a0cc8b3245bda036081039ee6a95" -> "57bc20d9c0e747edb803a13e8f423aca" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_Vertex AI Pipeline" ltail="cluster_Data Trigger"]
+	"09d7b4559be74d27b331ac086e9cd64c" -> "906a1bb3001c48af8346f05172723973" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead=cluster_Monitoring ltail="cluster_Experimental Processing"]
+	"244f4e34d4ec470084459125f3509860" -> "57bc20d9c0e747edb803a13e8f423aca" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_Experimental Processing" ltail=cluster_Experimentation]
+	subgraph "cluster_GCP Experimental Environment" {
+		graph [bgcolor="#E0F2F1" fontcolor=black fontname="Sans-Serif" fontsize=12 label="GCP Experimental Environment" labeljust=l margin=25 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		subgraph cluster_Experimentation {
+			graph [bgcolor="#E1F5FE" fontcolor=black fontname="Sans-Serif" fontsize=12 label=Experimentation labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			f18f530633464888aeaa424cabb253a6 [label="Vertex
+Workbench" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+			"069debcd6a8d4ee2a332c9442dbc81b9" [label="GitLab Repo" height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/onprem/vcs/gitlab.png" shape=none]
+			"244f4e34d4ec470084459125f3509860" [label="GitLab CI/CD" height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/onprem/ci/gitlabci.png" shape=none]
+			"33370774eea84bd6b76c38aaca3b4500" [label="Artifact
+Registry" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/devtools/container-registry.png" shape=none]
+		}
+		subgraph "cluster_Experimental Pipeline" {
+			graph [bgcolor="#E8DAEF" fontcolor=black fontname="Sans-Serif" fontsize=12 label="Experimental Pipeline" labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			subgraph "cluster_Data Trigger" {
+				graph [bgcolor="#E1F5FE" fontcolor=black fontname="Sans-Serif" fontsize=12 label="Data Trigger" labeljust=l margin=12 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+				"6362d5c1d2814df9b6a86683713e30f2" [label=Scheduler height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/devtools/scheduler.png" shape=none]
+				"5a69f16dd7524fc19968d1f2b1bbf287" [label="Cloud Pub/Sub
+Metrics Channel" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/pubsub.png" shape=none]
+				"1833a0cc8b3245bda036081039ee6a95" [label="Data Product
+BigQuery" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/bigquery.png" shape=none]
+			}
+			subgraph "cluster_Experimental Processing" {
+				graph [bgcolor="#FFF8E1" fontcolor=black fontname="Sans-Serif" fontsize=12 label="Experimental Processing" labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+				subgraph "cluster_Vertex AI Pipeline" {
+					graph [bgcolor="#669DF6" fontcolor=white fontname="Sans-Serif" fontsize=12 label="Vertex AI Pipeline" labeljust=l margin=12 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+					"57bc20d9c0e747edb803a13e8f423aca" [label="Create
+Dataset" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+					"0124b8c8ae0741dab08aeadf15488690" [label="Data
+Transformation" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+					e68cf70b2c1b407ba51c1d19621ff95e [label="Model
+Training" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+					"130a9003bb614e1db770cb1b25ee17fc" [label="Model
+Evaluation" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/ml/ai-platform.png" shape=none]
+				}
+				"09d7b4559be74d27b331ac086e9cd64c" [label="GitLab CI/CD" height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/onprem/ci/gitlabci.png" shape=none]
+				"33388acecc2145f8b57bfaeec228d8b6" [label="Artifact
+Registry" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/devtools/container-registry.png" shape=none]
+				"8ed69d3f155a4a39a834bcd151fb504b" [label=Developer height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/onprem/client/user.png" shape=none]
+			}
+			subgraph cluster_Monitoring {
+				graph [bgcolor="#E8DAEF" fontcolor=black fontname="Sans-Serif" fontsize=12 label=Monitoring labeljust=l margin=12 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+				"453786863e6440babda9e1b2d552625e" [label=Logging height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/operations/logging.png" shape=none]
+				"906a1bb3001c48af8346f05172723973" [label=Alerting height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/security/security-command-center.png" shape=none]
+			}
+		}
+	}
+	"5f07ddebf10a4239bc5f0cb566c50045" -> "069debcd6a8d4ee2a332c9442dbc81b9" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead=cluster_Experimentation ltail="cluster_ML Pipeline"]
+	"9c454a5b632c49beb9db9554fab6bd84" -> "94cd879acd0b4fabaadb6531922a8636" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"94cd879acd0b4fabaadb6531922a8636" -> "6941b998b25e4321ad727817795b728c" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"6941b998b25e4321ad727817795b728c" -> d40800194a4043149ee2e42812a693f5 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"5754dcadab604e26937d18481cad6f48" -> "14276265a2904fbd96bea38e1e2435bd" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"14276265a2904fbd96bea38e1e2435bd" -> b012c989c9ff4179aed28bbe3dc2b6f4 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	d40800194a4043149ee2e42812a693f5 -> "5754dcadab604e26937d18481cad6f48" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_Production Pipeline" ltail="cluster_Data Trigger"]
+	"14276265a2904fbd96bea38e1e2435bd" -> "52b1b26a43224a3fb2d5625346102c58" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_External Data Sources" ltail="cluster_Production Pipeline"]
+	"7b790d411d324ad3a27fe3beedce9540" -> aa8d1a4a367c4e26851339f5143c6991 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_External Data Sources" ltail="cluster_External Data Sources"]
+	b012c989c9ff4179aed28bbe3dc2b6f4 -> e68a21580527484da22d1fd97f8711fd [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 ltail="cluster_Production Pipeline"]
+	c490b49c0df4480a90d6aec979caaf8a -> "14276265a2904fbd96bea38e1e2435bd" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_Production Pipeline"]
+	b012c989c9ff4179aed28bbe3dc2b6f4 -> b09d7ab2b96d4a7f99023bc44019403a [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead=cluster_Monitoring ltail="cluster_Production Pipeline"]
+	subgraph "cluster_GCP Production Environment" {
+		graph [bgcolor="#E1F5FE" fontcolor=black fontname="Sans-Serif" fontsize=12 label="GCP Production Environment" labeljust=l margin=25 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		subgraph "cluster_Data Trigger" {
+			graph [bgcolor="#E1F5FE" fontcolor=black fontname="Sans-Serif" fontsize=12 label="Data Trigger" labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"9c454a5b632c49beb9db9554fab6bd84" [label=Scheduler height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/devtools/scheduler.png" shape=none]
+			"94cd879acd0b4fabaadb6531922a8636" [label="Cloud Pub/Sub
+Metrics Channel" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/pubsub.png" shape=none]
+			"6941b998b25e4321ad727817795b728c" [label="Data Product
+BigQuery" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/bigquery.png" shape=none]
+			d40800194a4043149ee2e42812a693f5 [label="Cloud Pub/Sub
+Metrics Channel" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/pubsub.png" shape=none]
+		}
+		subgraph "cluster_Production Pipeline" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="Production Pipeline" labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"5754dcadab604e26937d18481cad6f48" [label="Schema Validation" height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/dataflow.png" shape=none]
+			"14276265a2904fbd96bea38e1e2435bd" [label="Batch Prediction" height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/dataflow.png" shape=none]
+			b012c989c9ff4179aed28bbe3dc2b6f4 [label="Metrics Pipeline
+Configuration in Pipeline
+SparkStreaming(Scala/Python)" height=2.7 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/dataproc.png" shape=none]
+		}
+		subgraph "cluster_External Data Sources" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="External Data Sources" labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"52b1b26a43224a3fb2d5625346102c58" [label="PEGA Bucket" height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/storage/storage.png" shape=none]
+			"7b790d411d324ad3a27fe3beedce9540" [label="Unica
+Bucket" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/storage/storage.png" shape=none]
+		}
+		c490b49c0df4480a90d6aec979caaf8a [label="Model Lineage
+BigQuery" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/bigquery.png" shape=none]
+		e68a21580527484da22d1fd97f8711fd [label="Data Store
+BigQuery" height=2.3 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/analytics/bigquery.png" shape=none]
+		aa8d1a4a367c4e26851339f5143c6991 [label="External Storage" height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/storage/storage.png" shape=none]
+		subgraph cluster_Monitoring {
+			graph [bgcolor="#E8DAEF" fontcolor=black fontname="Sans-Serif" fontsize=12 label=Monitoring labeljust=l margin=15 pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			b09d7ab2b96d4a7f99023bc44019403a [label=Logging height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/operations/logging.png" shape=none]
+			a1f8bedcbab740e58cbff679a741b220 [label=Alerting height=1.9 image="/Users/rithikmaligi/Library/Python/3.9/lib/python/site-packages/resources/gcp/security/security-command-center.png" shape=none]
+		}
+	}
+	"09d7b4559be74d27b331ac086e9cd64c" -> "5754dcadab604e26937d18481cad6f48" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_Production Pipeline"]
+	"33388acecc2145f8b57bfaeec228d8b6" -> "5754dcadab604e26937d18481cad6f48" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 lhead="cluster_Production Pipeline"]
+	"130a9003bb614e1db770cb1b25ee17fc" -> c490b49c0df4480a90d6aec979caaf8a [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 ltail="cluster_Vertex AI Pipeline"]
+}
