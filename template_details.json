@@ -1,0 +1,200 @@
+```json
+{
+  "mlops_project": {
+    "copier.yml": null,
+    "README.md": null,
+    ".gitignore": null,
+    "config": {
+      "default.yml": null,
+      "experimental.yml": null,
+      "production.yml": null,
+      "_settings.yml": null
+    },
+    "src": {
+        "data_preprocessing":{
+            "__init__.py": null,
+            "data_loader.py": null,
+            "feature_engineering.py": null,
+            "data_validation.py": null
+          },
+          "model_training":  {
+            "__init__.py": null,
+            "trainer.py": null,
+            "model.py": null,
+            "hyperparameters.py": null,
+            "utils.py": null
+          },
+      "model_evaluation": {
+        "__init__.py": null,
+        "evaluator.py": null,
+        "metrics.py": null
+      },
+
+      "model_prediction": {
+         "__init__.py": null,
+        "predictor.py": null,
+        "batch_predictor.py":null
+      },
+
+       "pipeline":{
+            "__init__.py": null,
+            "pipeline_experimental.py": null,
+            "pipeline_production.py": null
+        },
+      "monitoring": {
+          "__init__.py":null,
+          "logging_utils.py":null,
+          "alerting_utils.py":null
+      },
+        "utils":{
+             "__init__.py": null,
+            "helpers.py": null,
+            "gcp_utils.py": null
+
+        }
+    },
+    "infrastructure": {
+      "modules": {
+        "vertex_ai_pipeline": {
+          "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+        "bigquery": {
+          "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+        "cloud_storage": {
+          "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+        "pubsub": {
+          "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+         "scheduler": {
+          "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+        "artifact_registry": {
+          "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+        "vertex_workbench":{
+            "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+          "dataproc":{
+              "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+          },
+           "dataflow":{
+               "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+           },
+           "cloud_logging":{
+            "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+        },
+          "cloud_monitoring":{
+             "main.tf": null,
+          "variables.tf": null,
+          "outputs.tf": null
+          }
+
+      },
+      "experimental": {
+        "main.tf": null,
+        "variables.tf": null,
+        "outputs.tf": null,
+        "providers.tf": null
+      },
+      "production": {
+        "main.tf": null,
+        "variables.tf": null,
+        "outputs.tf": null,
+        "providers.tf": null
+
+      },
+        "backend.tf": null
+
+    },
+     "tests": {
+      "unit": {
+          "data_preprocessing":{
+              "__init__.py":null,
+              "test_data_loader.py":null,
+              "test_feature_engineering.py": null,
+              "test_data_validation.py":null
+          },
+        "model_training": {
+            "__init__.py":null,
+          "test_trainer.py": null,
+            "test_model.py":null
+        },
+          "model_evaluation":{
+              "__init__.py":null,
+              "test_evaluator.py":null
+          },
+
+        "model_prediction": {
+            "__init__.py":null,
+            "test_predictor.py": null,
+            "test_batch_prediction.py":null
+        },
+          "utils": {
+              "__init__.py":null,
+              "test_helper.py":null,
+              "test_gcp_utils.py": null
+          }
+      },
+      "integration": {
+          "__init__.py": null,
+        "test_experimental_pipeline.py": null,
+        "test_production_pipeline.py": null
+
+      }
+    },
+
+    "cicd": {
+      ".gitlab-ci.yml": null,
+       "scripts":{
+          "build_docker_image.sh": null,
+           "deploy_experimental.sh": null,
+          "deploy_production.sh": null,
+          "run_tests.sh": null
+       }
+    },
+    "docker": {
+      "Dockerfile": null,
+      ".dockerignore":null
+    },
+    "documentation": {
+          "architecture.md": null,
+          "setup_guide.md": null,
+          "developer_guide.md": null,
+          "api_reference.md":null
+
+    },
+    "examples":{
+      "quickstart":{
+        "run_experiment.py": null,
+        "run_production.py":null,
+           "sample_data":{
+              "data.csv":null
+            }
+
+      }
+    }
+  }
+}
+```
